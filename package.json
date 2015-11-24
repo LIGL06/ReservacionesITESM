@@ -1,0 +1,30 @@
+{
+  "name": "reservaciones",
+  "version": "1.0.0",
+  "description": "Sistema de Reservaciones para el uso local del Campus.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LIGL06/ReservacionesITESM.git"
+  },
+  "keywords": [
+    "Reservaciones",
+    "ITESM",
+    "Auditorios",
+    "Calendario"
+  ],
+  "author": "Luis Iván García Luna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LIGL06/ReservacionesITESM/issues"
+  },
+  "homepage": "https://github.com/LIGL06/ReservacionesITESM#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-stormpath": "^2.3.0",
+    "mongoose": "^4.2.7"
+  }
+}
