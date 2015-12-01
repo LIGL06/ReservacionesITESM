@@ -1,0 +1,19 @@
+extends ../layout.jade
+block contenido
+  div.jumbotron.top-space.col-xs-10.col-sm-10.col-md-10.col-lg-10.center-block.text-center.no-float
+    h2.medium.font1 #[i.fa.fa-mobile] Dispositivos de: #[strong #{user.givenName}]
+    p Dispositivos en control
+    each product in products
+      div.col-md-4.col-sm-6.col-xs-12.inline-block
+        h3.font2=product.title
+        img.col-xs-7.col-md-4.no-float(src='#{product.image.url}')
+    //- h2.col-xs-4.col-sm-4.col-md-4.col-lg-4.font2.text-center #[i.fa.fa-lightbulb-o] #[.small Luz 1]
+    //-   button.led(id="10") On/Off
+    //- h2.col-xs-4.col-sm-4.col-md-4.col-lg-4.font2.text-center #[i.fa.fa-lightbulb-o] #[.small Luz 2]
+    //-   button.led(id="11") On/Off
+    //- h2.col-xs-4.col-sm-4.col-md-4.col-lg-4.font2.text-center #[i.fa.fa-lightbulb-o] #[.small Luz 3]
+    //-   button.led(id="12") On/Off
+    //-   
+    //-   script(src="js/jquery.min.js")
+    //-   script(src="js/buttons.js")
+    

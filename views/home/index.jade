@@ -1,0 +1,290 @@
+extends ../nlayout.jade
+block contenido
+  header(id="top-page")
+    div.container
+      div.intro-text
+        div.intro-lead-in 
+        div.intro-heading
+        a.page-scroll.btn.btn-xl.font1(href="#services" id="main-button") ¿Quiénes somos?
+  section
+    div.container
+      div.row
+        div.col-lg-12.text-center
+          h2(id="services").section-heading Misión
+          p.section-subheading.text-muted Somos una empresa que brinda servicios integrales a nuestros clientes, mediante un trabajo sistemático y organizado, cumpliendo con los objetivos de cada proyecto con el fin de satisfacer al máximo las necesidades de nuestros clientes; contamos con personal idóneo capacitado para el desarrollo de proyectos, actuamos en pro del factor humano involucrado en el desarrollo de nuestras actividades logrando bienestar común.
+      div.row.text-center
+        div.col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+          h4.service-heading Vendemos soluciones de Automatización
+          p.text-muted Tenemos todas las opciones para crear un entorno inteligente
+        div.col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-laptop.fa-stack-1x.fa-inverse
+          h4.service-heading Aplicaciones Multiplataforma
+          p.text-muted Conecta todos tus dispositivos desde un solo lugar en donde quiera que estes
+        div.col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-lock.fa-stack-1x.fa-inverse
+          h4.service-heading Privacidad y Seguridad
+          p.text-muted Tus datos siempre estarán protegidos
+      div.row
+        div.col-lg-12.text-center
+          h2.section-heading Visión
+          p.section-subheading.text-muted Ser la empresa líder nacional de domótica en la prestación de servicios de seguridad y confort con los estándares más altos de calidad; creando una sensación de tranquilidad satisfaciendo sus necesidades siendo precisos y eficientes.
+      div.row.text-center 
+        div.col-md-2
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-check.fa-stack-1x.fa-inverse
+          h4.service-heading Responsabilidad  
+        div.col-md-2
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-thumbs-up.fa-stack-1x.fa-inverse
+          h4.service-heading Honestidad
+        div.col-md-2
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-users.fa-stack-1x.fa-inverse
+          h4.service-heading Amabilidad  
+        div.col-md-2
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-flag.fa-stack-1x.fa-inverse
+          h4.service-heading Lealtad
+        div.col-md-2
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-smile-o.fa-stack-1x.fa-inverse
+          h4.service-heading Calidad
+        div.col-md-2
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-phone.fa-stack-1x.fa-inverse
+          h4.service-heading Transparencia  
+  section.bg-light-gray(id="portfolio")
+    div.container
+      div.row
+        div.col-lg-12.text-center
+          h2.section-heading Soluciones
+          h3.section-subheading.text-muted Soluciones personalizadas para tí
+      div.row
+        div.col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href="#portfolioModal1" data-toggle="modal")
+            div.portfolio-hover-content
+              i.fa.fa-plus.fa-3x
+            img.img-responsive.img-centered(src="/img/portfolio/p01.png" alt="Producto01")  
+          div.portfolio-caption  
+            h4 Control de Iluminación
+            p.text-muted Módulo de controlo para iluminación y red eléctrica
+        div.col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href="#portfolioModal2" data-toggle="modal")
+            div.portfolio-hover-content
+              i.fa.fa-plus.fa-3x
+            img.img-responsive.img-centered(src="/img/portfolio/p02.png" alt="Producto02")  
+          div.portfolio-caption
+            h4 Cámaras de seguridad
+            p.text-muted Cámaras con control remoto en tiempo real
+        div.col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href="#portfolioModal3" data-toggle="modal")
+            div.portfolio-hover-content
+              i.fa.fa-plus.fa-3x
+            img.img-responsive.img-centered(src="/img/portfolio/p03.png" alt="Producto03")  
+          div.portfolio-caption
+            h4 Cerraduras electrónicas
+            p.text-muted Manten la seguridad en donde quiera que estés
+        div.col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href="#portfolioModal4" data-toggle="modal")
+            div.portfolio-hover-content
+              i.fa.fa-plus.fa-3x
+            img.img-responsive.img-centered(src="/img/portfolio/p04.png" alt="Producto04")  
+          div.portfolio-caption
+            h4 Control de Aire Acondicionado
+            p.text-muted Manten el control de temperatura desde distancia
+        div.col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href="#portfolioModal5" data-toggle="modal")
+            div.portfolio-hover-content
+              i.fa.fa-plus.fa-3x
+            img.img-responsive.img-centered(src="/img/portfolio/p05.png" alt="Producto05")  
+          div.portfolio-caption
+            h4 Ventanas Inteligentes
+            p.text-muted Manten la integridad de las ventanas desde distancia
+  section.bg-light-gray(id="team")
+    div.container
+      div.row
+        div.col-lg-12.text-center
+          h2.section-heading Nuestro excelente equipo
+          h3.section-subheading.text-muted Estás en las mejores manos
+      div.row
+        div.col-sm-4
+          div.team-member
+            img.img-responsive.img-circle(src="/img/team/01.png" alt="Equipo01")
+            h4 Mauricio Santoyo
+            p.text-muted Lead Engineer - CEO
+            ul.list-inline.social-buttons
+              li #[a(href="https://twitter.com/msantoyo92") #[i.fa.fa-twitter]]
+              li #[a(href="https://www.facebook.com/msantoyo92") #[i.fa.fa-facebook]]
+              li #[a(href="https://www.linkedin.com/pub/mauricio-santoyo-gutierrez/a6/a1b/759/es") #[i.fa.fa-linkedin]]
+        div.col-sm-4
+          div.team-member
+            img.img-responsive.img-circle(src="/img/team/02.png" alt="Equipo02")
+            h4 Dafne Reyes
+            p.text-muted Lead Financing - CFO
+            ul.list-inline.social-buttons
+              li #[a(href="https://twitter.com/dafneli93") #[i.fa.fa-twitter]]
+              li #[a(href="https://www.facebook.com/dafne.reyes") #[i.fa.fa-facebook]]
+              li #[a(href="https://www.linkedin.com/pub/dafne-lizzete-reyes-blanco/80/b62/93") #[i.fa.fa-linkedin]]      
+        div.col-sm-4
+          div.team-member
+            img.img-responsive.img-circle(src="/img/team/03.png" alt="Equipo03")
+            h4 Iván García
+            p.text-muted Lead Software Engineer - CIO
+            ul.list-inline.social-buttons
+              li #[a(href="https://twitter.com/ligl_06") #[i.fa.fa-twitter]]
+              li #[a(href="https://www.facebook.com/garcialuna") #[i.fa.fa-facebook]]
+              li #[a(href="https://mx.linkedin.com/in/luisgarcialuna") #[i.fa.fa-linkedin]]      
+      div.row
+        div.col-lg-8.col-lg-offset-2.text-center
+          p.large.text-muted Equipo creador de soluciones de automatización para tí
+  section(id="contact")
+    div.container
+      div.row
+        div.col-lg-12.text-center
+          h2.section-heading Contáctanos
+          h3.section-subheading.text-muted Estamos abiertos a todo tipo de preguntas, adelante
+      div.row
+        div.col-lg-12
+          form(id="contactForm" name="sentMessage" novalidate)
+            div.row
+              div.col-md-6
+                div.form-group
+                  input.form-control(type="text" placeholder="Tu nombre *" id="name" required data-validation-required-message="Por favor ingresa tu nombre")
+                  p.help-block.text-danger
+                div.form-group
+                  input.form-control(type="email" placeholder="Tu Email *" id="email" required data-validation-required-message="Por favor ingresa tu email")
+                  p.help-block.text-danger
+                div.form-group
+                    input.form-control(type="tel" placeholder="Tu Phone *" id="phone" required data-validation-required-message="Por favor ingresa tu número telefónico")
+                    p.help-block.text-danger
+              div.col-md-6
+                div.form-group
+                  textarea.form-control(placeholder="Tu mensaje *" id="message" required data-validation-required-message="Por favor inserta un mensaje")
+                  p.help-block.text-danger
+              div.clearfix
+              div.col-lg-12.text-center
+                    div(id="sucess")
+                    button.btn.btn-xl(type="submit") Mandar mensaje
+  footer
+    div.container
+      div.row
+        div.col-md-4
+          span.copyright Copyright &copy; Autodom 2015
+        div.col-md-4
+          ul.list-inline.social-buttons
+            li #[a(href="#") #[i.fa.fa-twitter]]
+            li #[a(href="#") #[i.fa.fa-facebook]]
+            li #[a(href="#") #[i.fa.fa-linkedin]]
+        div.col-md-4
+          ul.list-inline.quicklinks
+            li #[a(href="#") Politicas de Privacidad]
+            li #[a(href="#") Terminos de uso]
+  div.portfolio-modal.modal.fade(id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true")
+    div.modal-content
+      div.close-modal(data-dismiss="modal")
+        div.lr
+          div.rl
+      div.container
+        div.row
+          div.col-lg-8.col-lg-offset-2
+            div.modal-body
+              h2 Control de Iluminación
+              p.item-intro.text-muted Módulo de controlo para iluminación y red eléctrica
+              img.img-responsive.img-centered(src="/img/portfolio/p01.png" alt="Producto01")
+              p Dispositivo que toma control de la salida de corriente electrica en iluminación de un contacto. 
+              p #[strong ¿Quieres más información del producto?] Puedes obtener más información, en: #[a(href="#") información] ,o puedes comprarlo en: #[a(href="#") aquí]
+              ul.light-inline
+                li Fecha estimada de entrega: Enero 2016
+                li Categoria: Control Doméstico
+              button.btn.btn-primary(type="button" data-dismiss="modal") #[i.fa.fa-times Cerrar Producto]
+  div.portfolio-modal.modal.fade(id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true")
+    div.modal-content
+      div.close-modal(data-dismiss="modal")
+        div.lr
+          div.rl
+      div.container
+        div.row
+          div.col-lg-8.col-lg-offset-2
+            div.modal-body
+              h2 Cámaras de seguridad
+              p.item-intro.text-muted Cámaras con control remoto en tiempo real
+              img.img-responsive.img-centered(src="/img/portfolio/p02.png" alt="Producto02")
+              p Sistema de vigilancia en tiempo real
+              p #[strong ¿Quieres más información del producto?] Puedes obtener más información, en: #[a(href="#") información] ,o puedes comprarlo en: #[a(href="#") aquí]
+              ul.light-inline
+                li Fecha estimada de entrega: Enero 2016
+                li Categoria: Control Doméstico
+              button.btn.btn-primary(type="button" data-dismiss="modal") #[i.fa.fa-times Cerrar Producto]
+  div.portfolio-modal.modal.fade(id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true")
+    div.modal-content
+      div.close-modal(data-dismiss="modal")
+        div.lr
+          div.rl
+      div.container
+        div.row
+          div.col-lg-8.col-lg-offset-2
+            div.modal-body
+              h2 Cerraduras electrónicas
+              p.item-intro.text-muted Manten la seguridad en donde quiera que estés
+              img.img-responsive.img-centered(src="/img/portfolio/p03.png" alt="Producto03")
+              p Sistema de seguridad para puertas con control a distancia.
+              p #[strong ¿Quieres más información del producto?] Puedes obtener más información, en: #[a(href="#") información] ,o puedes comprarlo en: #[a(href="#") aquí]
+              ul.light-inline
+                li Fecha estimada de entrega: Enero 2016
+                li Categoria: Control Doméstico
+              button.btn.btn-primary(type="button" data-dismiss="modal") #[i.fa.fa-times Cerrar Producto]
+  div.portfolio-modal.modal.fade(id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true")
+    div.modal-content
+      div.close-modal(data-dismiss="modal")
+        div.lr
+          div.rl
+      div.container
+        div.row
+          div.col-lg-8.col-lg-offset-2
+            div.modal-body
+              h2 Control de Aire Acondicionado
+              p.item-intro.text-muted Manten el control de la temperatura desde distancia
+              img.img-responsive.img-centered(src="/img/portfolio/p04.png" alt="Producto04")
+              p Sistema que controla dispositivos de aire acondicionado y programación automatica de los mismos.
+              p #[strong ¿Quieres más información del producto?] Puedes obtener más información, en: #[a(href="#") información] ,o puedes comprarlo en: #[a(href="#") aquí]
+              ul.light-inline
+                li Fecha estimada de entrega: Enero 2016
+                li Categoria: Control Doméstico
+              button.btn.btn-primary(type="button" data-dismiss="modal") #[i.fa.fa-times Cerrar Producto]
+  div.portfolio-modal.modal.fade(id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true")
+    div.modal-content
+      div.close-modal(data-dismiss="modal")
+        div.lr
+          div.rl
+      div.container
+        div.row
+          div.col-lg-8.col-lg-offset-2
+            div.modal-body
+              h2 Ventanas Inteligentes
+              p.item-intro.text-muted Manten la integridad de las ventanas desde distancia
+              img.img-responsive.img-centered(src="/img/portfolio/p05.png" alt="Producto05")
+              p Sistema diseñado que detecta las condiciones climaticas y se adapta a ellas; cerrando y/o arbriendo ventanas
+              p #[strong ¿Quieres más información del producto?] Puedes obtener más información, en: #[a(href="#") información] ,o puedes comprarlo en: #[a(href="#") aquí]
+              ul.light-inline
+                li Fecha estimada de entrega: Enero 2016
+                li Categoria: Control Doméstico
+              button.btn.btn-primary(type="button" data-dismiss="modal") #[i.fa.fa-times Cerrar Producto]
+  script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")
+  script(src="/js/classie.js")
+  script(src="/js/cbpAnimateHeader.js")
+  script(src="/js/jqBootstrapValidation.js")
+  script(src="/js/contact_me.js")
+  script(src="/js/agency.js")

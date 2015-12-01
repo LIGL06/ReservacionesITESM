@@ -23,8 +23,13 @@
   },
   "homepage": "https://github.com/LIGL06/ReservacionesITESM#readme",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "express-stormpath": "^2.3.0",
-    "mongoose": "^4.2.7"
+    "express-stormpath": "~2.0.0",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.2.7",
+    "multer": "^1.1.0",
+    "stormpath": "^0.15.0"
   }
 }

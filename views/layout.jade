@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+  head
+    meta(content="http://www.autodom.herokuapp.com" type="og:url")
+    meta(meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(property="og:image" content="/img/logo.png")
+    meta(meta content="Autodom - Leading Home Automation, Home Automation, Domotics" property="og:description")
+    link(rel="shortcut icon" type="image/ico" href="/img/logo.png")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    link(rel="stylesheet" type="text/css" href="/css/style.css")
+    link(rel="stylesheet" type="text/css" href="/css/animate.css")
+    title Autodom
+  body
+    nav.navbar.navbar-default.font1
+      div.container-fluid
+        div.navbar-header
+          button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false")
+            span.sr-only Toggle Nav
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="/") #[img.small-img.no-space-top(src="/img/logo.png")]
+        div.collapse.navbar-collapse(id="main-nav")
+          ul.nav.navbar-nav
+            li.dropdown.active #[a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Dispositivos #[span.caret]]
+              ul.dropdown-menu
+                li #[a(href="/dashboard/new") Agregar Dispositivo]
+                li #[a(href="/dashboard") Mostrar Dispositivos]
+                li.divider(role="separator")
+                li #[a(href="/dashboard/admin") Administrar Dispositivos]
+                li.divider(role="separator")
+                li #[a(href="#") Planes/Servicios]
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown #[a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Perfil: #{user.fullName}  #[span.caret]]
+              ul.dropdown-menu
+                li #[a(href="#") Editar Perfil]
+                li #[a(href="#") Editar Dispositivos]
+                li.divider(role="separator")
+                li #[a(href="/pagos") Metodos de pago]
+                li.divider(role="separator")
+                li #[a(href="/logout") Cerrar Sesión]
+    block contenido
+script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")

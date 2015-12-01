@@ -1,0 +1,43 @@
+extends base
+
+block vars
+  - var title = 'Reiniciar contraseña'
+  - var description = '¿Olvidaste tu constraseña? ¡No hay problema!'
+  - var bodytag = 'login'
+
+block body
+  .container.custom-container
+    .va-wrapper
+      .view.login-view.container
+        .box.row
+          .email-password-area.col-xs-12.large.col-sm-12
+            .header
+              span.
+                ¿Olvidaste tu password?
+              p.
+                Ingresa tu email abajo para hacer reset a tu password. Recibiras un email
+                que deberás abrir para continuar. Puede que necesites checar la bandeja de spam.
+
+            if error
+              .alert.alert-danger.bad-login
+                p #{error}
+
+            if formErrors
+              .alert.alert-danger.bad-login
+                each error in formErrors
+                  p #{error}
+                  
+            form.login-form.form-horizontal(method='post', role='form')
+              input(name='_csrf', type='hidden', value=csrfToken)
+
+              .form-group.group-email
+                label.col-sm-4 Email
+
+                div.col-sm-8
+                  input.form-control(placeholder='Email', required=true, name='email', type='text')
+
+              div
+                button.login.btn.btn-login.btn-sp-green(type='submit') Reiniciar contraseña
+
+        if app.get('stormpathEnableLogin')
+          a.forgot(href="#{app.get('stormpathLoginUrl')}") Regresar al login
