@@ -1,13 +1,13 @@
 extends base
 
 block vars
-  - var title = 'Autodom - Login'
-  - var description = 'Inicia sesión con tu cuenta'
+  - var title = 'ITESM - Login'
+  - var description = 'Inicia sesión con tu cuenta institucional'
   - var bodytag = 'login'
 
 block body
 
-  .container.custom-container.bgimage
+  .container.custom-container
     .va-wrapper
       .view.login-view.container
         if status
@@ -118,7 +118,7 @@ block body
           if stormpathConfig.socialProviders
             .social-area.col-xs-12.col-sm-4
               img.img-responsive.hidden-xs(src="img/logo.png" alt="logotipo")
-              label Social Auth:
+              label Inicia Sesión con Facebook:
               if stormpathConfig.socialProviders.facebook.enabled
                 include facebook_login_form.jade
               if stormpathConfig.socialProviders.google.enabled

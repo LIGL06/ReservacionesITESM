@@ -1,23 +1,36 @@
 doctype html
-html(lang="en")
+html.full(lang="en")
 	head
-		meta(content="http://www.autodom.herokuapp.com" type="og:url")
+		meta(content="http://www.tam.itesm.mx" type="og:url")
 		meta(meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
-		meta(property="og:image" content="img/logo.png")
-		meta(meta content="Autodom - Leading Home Automation, Home Automation, Domotics" property="og:description")
-		link(rel="shortcut icon" type="image/ico" href="img/logo.png")
-		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
-		link(rel="stylesheet" type="text/css" href="css/style.css")
-		link(rel="stylesheet" type="text/css" href="css/animate.css")
-		title Sistema de Reservaciones - ITESM
+		meta(property="og:image" content="/img/logo.png")
+		meta(meta content="ITESM Campus Tampico - Vive la cultura emprendedora" property="og:description")
+		link(rel="shortcut icon" type="image/ico" href="/img/logo.png")
+		link(rel="stylesheet" href="/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/css/font-awesome.min.css")
+		link(rel="stylesheet" type="text/css" href="/css/style.css")
+		link(rel="stylesheet" type="text/css" href="/css/animate.css")
+		title Sistema de Reservacidones - ITESM Campus Tampico
 	body
-		section.full-height.text-center(id="main-content")
-			div.data
-				div.col-xs-12.col-md-12.col-sm-12.col-lg-12.center-block.no-float.top-space
-					img.animated.fadeInDown.delay-1.med(alt="logo" src="img/logo.png")
-					div.animated.fadeIn.delay-2.font1
-						h1.big Sitema de Reservaciones para salas de Video
-							a(href="/login")
-								i.col-md-12.fa.fa-sign-in.fa-3x.small
-									h2.font3 Iniciar Sesión
+		nav.navbar.navbar-inverse.navbar-fixed-bottom(role="navigation")
+			.container
+				.navbar-header
+					button.navbar-toggle(type="buttton" data-toggle="collapse" data-target="#navbar01")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					img.navbar-brand(src="/img/logo.png")
+					a.navbar-brand(href="http://www.tam.itesm.mx") ITESM Campus Tampico
+				.collapse.navbar-collapse(id="navbar01")
+					ul.nav.navbar-nav
+						li #[a(href="/login") Iniciar Sesión]
+						li #[a(href="/dashboard") Tablero de Horarios]
+						li #[a(href="/help") Contacto]
+		.container.jumbotron
+			.row
+				.col-md-6.col-sm-12.col-lg-12
+					h1.text-center Sistema de Reservaciones
+						h2.text-center.blue Reserva una sala de video con tu correo institucional.
+	script(src="/js/jquery.js")
+	script(src="/js/bootstrap.js")
