@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Sistema de Reservaciones para el uso local del Campus.",
   "main": "app.js",
+  "engines": {
+     "node": "4.2.1",
+     "npm": "2.14.1"
+ },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

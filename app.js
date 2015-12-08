@@ -14,7 +14,7 @@ const APIpath = 'https://api.stormpath.com/v1/applications/1j3A4OUqTuPikLGcU5M7Y
 const Schema = mongoose.Schema
 
 /*Variables de sistema*/
-const port = process.env.PORT || 10000
+const port = process.env.PORT || 12000
 
 mongoose.connect('mongodb://localhost/itesm',function(error,db){
   if(!error) console.log('Conexión a DB')
