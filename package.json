@@ -30,9 +30,10 @@
     "body-parser": "latest",
     "express": "latest",
     "express-stormpath": "latest",
-    "jade": "latest",
+    "jade": "^1.11.0",
     "method-override": "latest",
     "mongoose": "latest",
-    "multer": "latest"
+    "multer": "latest",
+    "yamljs": "^0.2.4"
   }
 }
