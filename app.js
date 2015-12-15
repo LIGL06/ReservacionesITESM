@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const path = require('path')
 // const multer = require('multer')
 const app = express()
+app.locals.moment = require('moment');
 // const mupload = multer({dest:'uploads/'})
 // const APIfile = __dirname + '/Key.properties'
 // const APIid = '6AI4RE7GB8HNBGPOVAA8D3BOF'
@@ -27,6 +28,7 @@ mongoose.get('itesm')
 app.set('view engine','jade')
 app.set('views','./views')
 app.use(express.static('public'))
+
 /*Auth*/
 app.use(stormpath.init(app,{
   "application":{
@@ -133,7 +135,7 @@ app.use(stormpath.init(app,{
         "login":{
           "enabled":false,
           "uri":"/login",
-          "nextUri":"/home",
+          "nextUri":"/",
            "view": __dirname + '/views/layouts/login.jade'
         },
         "logout":{
@@ -193,6 +195,9 @@ app.get('/home',function(req,res){
 app.get('/consulta',function(req,res){
 
 })
+app.get('/dashboard',stormpath.loginRequired,function(req,res){
+  res.render('dashboard/index')
+})
 app.post('/reserva',stormpath.loginRequired,function(req,res){
   const data = {
     fecha_inicio: req.body.fechain,
@@ -210,7 +215,6 @@ app.post('/reserva',stormpath.loginRequired,function(req,res){
     })
   res.render('dashboard')
 })
-
 app.on('stormpath.ready',function(error){
   if(!error) console.log('Aplicación ejecutándose en: '+port)
   else console.log('Error al iniciar la app')

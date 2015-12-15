@@ -1,16 +1,3 @@
 extends ../layout.jade
 block contenido  
-  div.container.col-xs-8.col-sm-8.col-md-6.col-lg-6.center-block.no-float.top-space.text-left.font1
-    h1 Agregar Dispositivo
-    form(method="post" action="/dashboard" style="margin-top:1.5em;" enctype="multipart/form-data")
-      div.form-group
-        label Nombre
-        input.form-control(type="text" name="title" placeholder="Nombre del producto")
-      div.form-group
-        label Descripción
-        textarea.form-control(name="description" placeholder="Descripción del producto")
-      div.form-group
-        label Imagen del producto
-        input(type="file" name="image_avatar")
-      div.form-group.text-right
-        input.btn.btn-info(type="submit" value="Guardar")
+  
