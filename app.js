@@ -3,7 +3,7 @@
 const bodyParser = require ('body-parser')
 const express = require ('express')
 const stormpath = require ('express-stormpath')
-const method_override = require('method-override')
+// const method_override = require('method-override')
 const mongoose = require('mongoose')
 const path = require('path')
 // const multer = require('multer')
@@ -19,15 +19,15 @@ const Schema = mongoose.Schema
 const port = process.env.PORT || 12000
 
 mongoose.connect('mongodb://localhost/itesm',function(error,db){
-  if(!error) console.log('Conexión a DB')
+  if(!error) console.log('Conexión a MongoDB')
   else console.log ('Error en conexión a DB')
 })
+mongoose.get('itesm')
 
 app.set('view engine','jade')
 app.set('views','./views')
 app.use(express.static('public'))
 /*Auth*/
-/*Stormpath Auth Init*/
 app.use(stormpath.init(app,{
   "application":{
     href: 'https://api.stormpath.com/v1/applications/6dE9P78g0bbttctVm5dOjo'
@@ -133,7 +133,7 @@ app.use(stormpath.init(app,{
         "login":{
           "enabled":false,
           "uri":"/login",
-          "nextUri":"home",
+          "nextUri":"/home",
            "view": __dirname + '/views/layouts/login.jade'
         },
         "logout":{
@@ -171,9 +171,9 @@ app.use(stormpath.init(app,{
   website: true
 }))
 
-
 const reservaJSON = {
-  fecha: Date,
+  fecha_inicio: Date,
+  fecha_termino: Date,
   sala: String,
   description: String,
   nombre: String,
@@ -181,16 +181,34 @@ const reservaJSON = {
   email: String
 }
 const reservaSchema = new Schema(reservaJSON)
+const db = mongoose.connection;
 const Reserva = mongoose.model('Reserva',reservaSchema)
 
 app.get('/',function(req,res){
   res.render('index')
 })
 app.get('/home',function(req,res){
-  res.render('home/index')
+
 })
-app.get('/reserva',function(req,res){
-  res.render('reserva/index')
+app.get('/consulta',function(req,res){
+
+})
+app.post('/reserva',stormpath.loginRequired,function(req,res){
+  const data = {
+    fecha_inicio: req.body.fechain,
+    fecha_termino: req.body.fechat,
+    sala: req.body.sala,
+    description: req.body.desc,
+    nombre: req.body.nombre,
+    matricula: req.body.mat,
+    email: req.body.email
+  }
+  const evento = new Reserva(data)
+    evento.save(function(errro){
+      console.log(evento)
+      res.redirect('dashboard')
+    })
+  res.render('dashboard')
 })
 
 app.on('stormpath.ready',function(error){
