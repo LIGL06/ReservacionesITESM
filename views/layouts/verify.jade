@@ -1,8 +1,8 @@
 extends base
 
 block vars
-  - var title = 'Resend Account Verification Email?'
-  - var description = 'Didn\'t receive your account verification email? No worries!'
+  - var title = 'Verificación de Correo'
+  - var description = '¿No recibiste el correo para verificación? ¡No te preocupes!'
   - var bodytag = 'login'
 
 block body
@@ -13,8 +13,8 @@ block body
           .row
             .alert.alert-warning.invalid-sp-token-warning
               p.
-                This verification link is no longer valid.  Please request
-                a new link from the form below.
+                Éste link de verificación ya no es valido. Por favor
+                solicita un link nuevo en la parte de abajo.
 
         .box.row
 
@@ -25,12 +25,10 @@ block body
               else
                 .header
                   span.
-                    Didn't receive your account verification email?
+                    ¿No recibiste tu verificación de cuenta?
               p.
-                Enter your email address below and we'll resend your account
-                verification email.  You will be sent an email which you will
-                need to open to continue. You may need to check your spam
-                folder.
+                Ingresa tu email abajo para hacer reset a tu password. Recibiras un email
+                que deberás abrir para continuar. Puede que necesites checar la bandeja de spam.
 
               if error
                 .alert.alert-danger.bad-login.form-error
@@ -47,13 +45,13 @@ block body
                 input(name='_csrf', type='hidden', value=csrfToken)
 
                 .form-group.group-email
-                  label.col-sm-4 Email
+                  label.col-sm-4 Correo institucional
 
                   div.col-sm-8
-                    input.form-control(placeholder='Email', required='true', name='email', type='text')
+                    input.form-control(placeholder='Correo AXX@itesm.mx o LXX@itesm.mx', required='true', name='email', type='text')
 
                 div
-                  button.login.btn.btn-login.btn-sp-green(type='submit') Submit
+                  button.login.btn.btn-login.btn-sp-green(type='submit') Enviar Correo
 
           if stormpathConfig.web.login.enabled
             a.forgot(href="#{stormpathConfig.web.login.uri}") Back to Log In

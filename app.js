@@ -123,12 +123,12 @@ app.use(stormpath.init(app,{
             "email",
             "password"
           ],
-          "view":"register"
+          "view":__dirname + '/views/layouts/register.jade'
         },
         "verifyEmail":{
           "uri":"/verify",
           "nextUri":"/",
-          "view":"verify"
+          "view":__dirname + '/views/layouts/verify.jade'
         },
         "login":{
           "enabled":false,
@@ -144,7 +144,7 @@ app.use(stormpath.init(app,{
         "forgotPassword":{
           "enabled":false,
           "uri":"/forgot",
-          "view":"forgot-password",
+          "view":__dirname + '/views/layouts/forgot-password.jade',
           "nextUri":"/login?status=forgot"
         },
         "changePassword":{
@@ -152,7 +152,7 @@ app.use(stormpath.init(app,{
             "autoLogin":false,
             "uri":"/change",
             "nextUri":"/login?status=reset",
-            "view":"change-password",
+            "view":__dirname + '/views/layouts/change-password.jade',
             "errorUri":"/forgot?status=invalid_sptoken"
           },
         "idSite":{

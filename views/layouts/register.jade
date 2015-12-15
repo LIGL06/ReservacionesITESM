@@ -1,8 +1,8 @@
 extends base
 
 block vars
-  - var title = 'Create an Account'
-  - var description = 'Create a new account.'
+  - var title = 'ITESM Campus Tampico'
+  - var description = 'Crear una cuenta'
   - var bodytag = 'register'
 
 block body
@@ -10,10 +10,10 @@ block body
   .container.custom-container
     .va-wrapper
       .view.registration-view.container
-        .box.row
+        .box.row.whitebg
           .col-sm-12
             .header
-              span Create Account
+              span Crear Cuenta
 
             if errors
               .alert.alert-danger
@@ -28,6 +28,6 @@ block body
                     - var value = form ? form[field.name] : '';
                     input.form-control(placeholder=field.placeholder, name=field.name, value=value, required=field.required, type=field.type)
 
-              button.btn.btn-register.btn-sp-green(type='submit') Create Account
+              button.btn.btn-register.btn-sp-green(type='submit') Crear Cuenta
 
-        a.to-login(href=stormpathConfig.web.login.uri) Back to Log In
+        a.to-login(href=stormpathConfig.web.login.uri) Regresar a Inicio de Sesión
